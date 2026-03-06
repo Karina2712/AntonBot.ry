@@ -1,5 +1,10 @@
 import telebot
 from telebot import types
+import os
+
+# Токен из переменных окружения Railway
+TOKEN = os.getenv('8736224674:AAEJJNx15lVIANtSHzJApskOxC3YtGrC4ns')  # ← ИЗМЕНИТЬ!
+bot = telebot.TeleBot(TOKEN)
 
 # ✅ ID Антона (496910417)
 ANTON_CHAT_ID = 496910417
@@ -68,4 +73,5 @@ def handle_message(message):
 
 if __name__ == "__main__":
     print("🚀 Бот запущен!")
+
     bot.infinity_polling(timeout=10)
